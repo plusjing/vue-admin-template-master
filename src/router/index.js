@@ -64,6 +64,16 @@ export const constantRoutes = [
       meta: { title: '产品管理', icon: 'dashboard' }
     }]
   },
+  {
+    path: '/category',
+    component: Layout,
+    children: [{
+      path: 'list',
+      name: 'category_list',
+      component: () => import('@/pages/category/List'),
+      meta: { title: '类别管理', icon: 'dashboard' }
+    }]
+  },
 
   // 404 page must be placed at the end !!!
   { path: '*', redirect: '/404', hidden: true }
